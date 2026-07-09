@@ -246,6 +246,35 @@ h1 {
     background: rgba(220, 38, 38, 0.18);
 }
 
+.filter-card {
+    display: flex;
+    gap: 10px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 12px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.filter-card button {
+    flex: 1;
+    border: none;
+    border-radius: 14px;
+    padding: 12px 14px;
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-card button:hover,
+.filter-card .active-filter {
+    background: var(--primary);
+    color: white;
+}
+
 @media (max-width: 800px) {
     .transaction-form {
         grid-template-columns: 1fr;

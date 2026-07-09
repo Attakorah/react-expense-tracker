@@ -34,6 +34,8 @@ function App() {
       localStorage.setItem("transactions", JSON.stringify(transactions));
     }, [transactions]);
 
+    const [filter, setFilter] = useState("all");
+
     function addTransaction(transaction) {
         setTransactions((prevTransactions) => [
             ...prevTransactions,
@@ -47,13 +49,47 @@ function App() {
       );
     }
 
+    const filteredTransactions = transactions.filter((transaction) => {
+      if (filter === "income") {
+          return transaction.type === "income";
+      }
+
+      if (filter === "expense") {
+          return transaction.type === "expense";
+      }
+
+      return true;
+    });
+
     return (
         <main className="app">
             <Header />
             <Balance transactions={transactions} />
             <TransactionForm onAddTransaction={addTransaction} />
+            <section className="filter-card">
+              <button
+                    className={filter === "all" ? "active-filter" : ""}
+                    onClick={() => setFilter("all")}
+                >
+                    All
+              </button>
+
+              <button
+                    className={filter === "income" ? "active-filter" : ""}
+                    onClick={() => setFilter("income")}
+                >
+                    Income
+              </button>
+
+              <button
+                    className={filter === "expense" ? "active-filter" : ""}
+                    onClick={() => setFilter("expense")}
+                >
+                    Expense
+              </button>
+            </section>
             <TransactionList
-              transactions={transactions}
+              transactions={filteredTransactions}
               onDeleteTransaction={deleteTransaction}
             />
         </main>
