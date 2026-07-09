@@ -30,11 +30,11 @@ function App() {
       ];
     });
 
-    useEffect(() => {
+      const [filter, setFilter] = useState("all");
+
+      useEffect(() => {
       localStorage.setItem("transactions", JSON.stringify(transactions));
     }, [transactions]);
-
-    const [filter, setFilter] = useState("all");
 
     function addTransaction(transaction) {
         setTransactions((prevTransactions) => [
