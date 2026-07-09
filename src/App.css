@@ -275,6 +275,24 @@ h1 {
     color: white;
 }
 
+.clear-all-btn {
+    width: 100%;
+    border: 1px solid rgba(220, 38, 38, 0.25);
+    border-radius: 16px;
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    background: rgba(220, 38, 38, 0.08);
+    color: var(--expense);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.clear-all-btn:hover {
+    background: rgba(220, 38, 38, 0.14);
+    transform: translateY(-2px);
+}
+
 @media (max-width: 800px) {
     .transaction-form {
         grid-template-columns: 1fr;

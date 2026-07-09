@@ -49,6 +49,10 @@ function App() {
       );
     }
 
+    function clearAllTransactions() {
+      setTransactions([]);
+    }
+
     const filteredTransactions = transactions.filter((transaction) => {
       if (filter === "income") {
           return transaction.type === "income";
@@ -88,6 +92,13 @@ function App() {
                     Expense
               </button>
             </section>
+
+            {transactions.length > 0 && (
+              <button className="clear-all-btn" onClick={clearAllTransactions}>
+                Clear All Transactions
+              </button>
+            )}
+            
             <TransactionList
               transactions={filteredTransactions}
               onDeleteTransaction={deleteTransaction}
