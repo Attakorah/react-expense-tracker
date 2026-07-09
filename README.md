@@ -1,16 +1,113 @@
-# React + Vite
+React Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern expense tracker application built with React and Vite.
 
-Currently, two official plugins are available:
+This project is part of my journey toward becoming a Full-Stack AI Developer. It helped me practice React component architecture, state management, forms, filtering, local storage, and financial calculations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features
+Add income transactions
+Add expense transactions
+Delete transactions
+Clear all transactions
+Filter transactions by:
+All
+Income
+Expense
+Calculate total income
+Calculate total expenses
+Calculate current balance
+Local storage persistence
+Responsive finance dashboard UI
+Technologies Used
+React
+Vite
+JavaScript
+CSS
+Git
+GitHub
+React Concepts Practiced
+Components
+Props
+useState
+useEffect
+Controlled inputs
+Form handling
+Event handling
+Rendering lists with .map()
+Filtering arrays with .filter()
+Calculating totals with .reduce()
+Conditional rendering
+Local storage
+Project Structure
+react-expense-tracker/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Balance.jsx
+│   │   ├── TransactionForm.jsx
+│   │   ├── TransactionList.jsx
+│   │   └── TransactionItem.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+Components
+Header
 
-## React Compiler
+Displays the project title and description.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Balance
 
-## Expanding the ESLint configuration
+Calculates and displays total income, total expenses, and current balance.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+TransactionForm
+
+Handles form input for adding new income or expense transactions.
+
+TransactionList
+
+Displays all filtered transactions.
+
+TransactionItem
+
+Displays a single transaction and allows it to be deleted.
+
+Installation and Setup
+
+Clone the repository:
+
+git clone https://github.com/Attakorah/react-expense-tracker.git
+
+Go into the project folder:
+
+cd react-expense-tracker
+
+Install dependencies:
+
+npm install
+
+Run the development server:
+
+npm run dev
+
+Then open the local URL shown in your terminal, usually:
+
+http://localhost:5173/
+Build for Production
+npm run build
+Author
+
+Attakorah Emmanuel
+
+Computer Science student at the University of Energy and Natural Resources.
+
+Goal: To become a Full-Stack AI Developer building AI-powered web and mobile applications.
+
+Status
+
+Completed ✅
